@@ -1,0 +1,47 @@
+GET  http://localhost:8888/api/v1/projects/9999/tasks
+Accept: application/json
+
+###
+
+GET  http://localhost:8888/api/v1/projects/1/tasks?done=false
+Accept: application/json
+
+###
+
+GET  http://localhost:8888/api/v1/projects/1/tasks?done=true
+Accept: application/json
+
+
+###
+
+GET  http://localhost:8888/api/v1/projects/1/tasks
+Accept: application/json
+
+###
+
+POST  http://localhost:8888/api/v1/projects/1/tasks
+Content-Type: application/json
+
+{
+  "title":"NEW-TASK",
+  "description":"What a description",
+  "timeEstimation": -4,
+  "actualTimeMinutes": 70,
+  "doneAt": "2022-01-18T22:33:26.72351"
+}
+
+###
+
+PUT  http://localhost:8888/api/v1/projects/1/tasks/185
+Content-Type: application/json
+
+{
+  "title":"NEW-TASK-UPDATED",
+  "description":"What a description",
+  "timeEstimation": 90,
+  "actualTimeMinutes": 70,
+  "doneAt": "2022-01-18T22:33:26.72351"
+}
+###
+
+DELETE  http://localhost:8888/api/v1/projects/1/tasks/3
